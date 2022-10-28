@@ -42,9 +42,9 @@ What about the blinking feature? To switch from group brightness control (duty c
 
 Setting the brightness by hand is fine, but I wanted to make some sort of fancy animation that could run on a loop. The easiest way to do that is to write a shell script, which is all I've done so far.
 
-`right-left.sh` runs the LEDs from right to left, by default in a magenta color (red + blue). LEDs 1 and 8 get an additional step of 50% brightness because I think it looks better. The last step has all lights off, before the cycle repeats.
+[`right-left.sh`](right-left.sh) runs the LEDs from right to left, by default in a magenta color (red + blue). LEDs 1 and 8 get an additional step of 50% brightness because I think it looks better. The last step has all lights off, before the cycle repeats.
 
-`test_ring.sh` does a similar pattern to running `ledcontrol` with the `-s ring` argument, but with this script you can change the oscillation speed. By default it steps by values of 1, but you can pass another number to change it. The higher the step value, the faster it will go. Note that the script does not have a `sleep` command in it; it simply runs as fast as it can given the time it takes to send I2C data.
+[`test_ring.sh`](test_ring.sh) does a similar pattern to running `ledcontrol` with the `-s ring` argument, but with this script you can change the oscillation speed. By default it steps by values of 1, but you can pass another number to change it. The higher the step value, the faster it will go. Note that the script does not have a `sleep` command in it; it simply runs as fast as it can given the time it takes to send I2C data.
 
 If you write any cool scripts of your own, please submit a PR; I'd love to try your scripts as well!
 
